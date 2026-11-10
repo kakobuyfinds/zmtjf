@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="preconnect" href="https://www.soleclassics.com">
+  <meta name="theme-color" content="#17345e">
+  <title>GTBuy spreadsheet | Guide des liens, tailles et photos QC</title>
+  <meta name="description" content="Guide GTBuy spreadsheet en français : 10 catégories, des repères pour vérifier une annonce, comparer les tailles et estimer le coût d’une livraison.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="GTBuy spreadsheet | Guide des liens, tailles et photos QC">
+  <meta property="og:description" content="Trouvez une catégorie sur HipobuyFind, puis vérifiez la variante, les mesures, les photos QC et les frais de livraison.">
+  <!--
+    Recherche éditoriale — requête Bing « GTBuy spreadsheet » : première page inaccessible.
+    Dix sites consultés en complément, sans classement Bing vérifié :
+    spreadsheetgtbuy.com (catégories, photos QC, livraison)
+    chinagrails.com (annonces Taobao, Weidian et 1688)
+    gtbuy.delivery (rubriques et parcours de recherche)
+    gtbuy-sheets.com (organisation par catégorie et photos QC)
+    spreadsheet-gtbuy.com (lecture des annonces et variantes)
+    qcradar.com (liens expirés et limites de la vérification)
+    chinafinds.app (étapes, inspection et expédition)
+    gtbuybuy.com (catégories, inspection et budget)
+    gtbuy.today (types de produits et inspection)
+    gtbuyagent.com (liens, photos et préparation de l’expédition)
+    Mots-clés secondaires : guide d’achat GTBuy, liens produits GTBuy, photos QC GTBuy, livraison GTBuy.
+  -->
+  <style>
+    :root{color-scheme:light;--ink:#18283b;--blue:#17345e;--paper:#f7f8fa;--white:#fff;--line:#c7d2e0;--muted:#46596d;--yellow:#f8dd78}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    a{color:inherit;text-underline-offset:.22em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #a83d14;outline-offset:3px}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.14}
+    h1,h2{letter-spacing:-.035em}
+    h1{font-size:clamp(2.55rem,6vw,5.1rem);overflow-wrap:anywhere}
+    h2{font-size:clamp(1.65rem,3vw,2.45rem)}
+    h3{font-size:1.18rem}
+    img{display:block;width:100%;height:auto}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    .mast{background:var(--blue);color:var(--white)}
+    .mast .wrap,.foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.35rem 1.2rem;padding-block:.8rem}
+    .mast a:focus-visible{outline-color:var(--yellow)}
+    .brand{font-weight:790}
+    .eyebrow,.index{font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+    .hero{padding-block:clamp(1.35rem,4vw,3.1rem)}
+    .browse{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(16rem,1fr);align-items:start;gap:clamp(.85rem,3vw,2.25rem)}
+    .hero h1{margin:.4rem 0 .65rem}
+    .hero p:not(.eyebrow){max-width:65ch}
+    .cover{background:#e9edf4;border:1px solid var(--line)}
+    .cover img{aspect-ratio:1.9;object-fit:contain;background:#fff}
+    figcaption{padding:.45rem .7rem;font-size:.82rem;color:var(--muted)}
+    .directory{border-block:2px solid var(--blue);background:var(--white)}
+    .directory h2{padding:.7rem .85rem;background:var(--yellow);font-size:1.25rem}
+    .categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));list-style:none;margin:0;padding:0}
+    .categories li{min-width:0;border-bottom:1px solid var(--line)}
+    .categories li:nth-child(odd){border-right:1px solid var(--line)}
+    .categories a{display:grid;grid-template-columns:2ch minmax(0,1fr) 1ch;align-items:center;gap:.65rem;min-height:2.85rem;height:100%;padding:.35rem .85rem;font-weight:690;line-height:1.25}
+    .categories a:hover{background:#eef3fb}
+    .index{color:var(--muted)}
+    .section{margin-block:clamp(2.2rem,5vw,4.2rem)}
+    .section>p{margin-top:.55rem;max-width:72ch}
+    .articles{margin-top:.8rem;border-top:2px solid var(--blue)}
+    .articles article{display:grid;grid-template-columns:2rem minmax(10rem,.55fr) minmax(0,1fr);gap:.75rem 1rem;padding:1rem .2rem;border-bottom:1px solid var(--line)}
+    .articles p+p{margin-top:.55rem}
+    .stamp{align-self:start;text-align:center;background:var(--blue);color:#fff;font-weight:800}
+    .states{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:1rem 0 0;border:1px solid var(--line);background:var(--white)}
+    .states div{padding:.8rem}
+    .states div+div{border-left:1px solid var(--line)}
+    .states dt{font-weight:800}
+    .states dd{margin:.25rem 0 0}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:1rem}
+    .gallery figure{background:var(--white);border:1px solid var(--line)}
+    .gallery img{aspect-ratio:1;object-fit:contain;background:#edf0f5}
+    .faq{margin-top:.75rem;border-top:2px solid var(--blue)}
+    details{padding:.65rem .15rem;border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;font-weight:750}
+    details p{margin:.45rem 0 .15rem;max-width:73ch}
+    .foot{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    @media(max-width:44rem){
+      .browse{grid-template-columns:1fr}
+      .cover img{aspect-ratio:2.4}
+      .articles article{grid-template-columns:2rem 1fr}
+      .article-copy{grid-column:2}
+      .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:32rem){
+      .categories a{padding-inline:.48rem;gap:.4rem}
+      .states{grid-template-columns:1fr}
+      .states div+div{border-left:0;border-top:1px solid var(--line)}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "fr",
+    "name": "GTBuy spreadsheet | Guide des liens, tailles et photos QC",
+    "description": "Guide GTBuy spreadsheet en français : 10 catégories, des repères pour vérifier une annonce, comparer les tailles et estimer le coût d’une livraison.",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu’est-ce qu’une GTBuy spreadsheet ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "C’est un tableau qui regroupe des liens produits et des informations de comparaison. Dans ce guide indépendant, les catégories mènent au catalogue HipobuyFind."}
+      },
+      {
+        "@type": "Question",
+        "name": "Comment vérifier qu’un lien correspond à la bonne variante ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ouvrez l’annonce source et sélectionnez le modèle, la couleur et la taille. Vérifiez ensuite que la référence, la disponibilité et le prix affichés correspondent à cette sélection."}
+      },
+      {
+        "@type": "Question",
+        "name": "Comment choisir sa pointure ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Mesurez vos deux pieds en centimètres et retenez le plus long. Vérifiez si le tableau du vendeur indique la longueur du pied ou de la semelle intérieure, puis comparez des mesures de même type."}
+      },
+      {
+        "@type": "Question",
+        "name": "Que peut-on vérifier avec des photos QC ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Les photos de contrôle qualité permettent de comparer la couleur, les coutures, les étiquettes et les finitions visibles. Pour établir la provenance, demandez des documents distincts."}
+      },
+      {
+        "@type": "Question",
+        "name": "Comment estimer le coût livré en France ou en Belgique ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Additionnez le prix de la variante, le transport local, les frais de service et l’expédition internationale. Vérifiez les taxes et frais de traitement applicables à l’adresse de livraison, ainsi que les montants déjà inclus dans le devis."}
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/zmtjf/">
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap">
+      <a class="brand" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+      <span class="eyebrow">Guide indépendant · Édition française</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="titre">
+      <div>
+        <p class="eyebrow">Carnet de repérage</p>
+        <h1 id="titre">GTBuy spreadsheet</h1>
+        <p>Partez d’une catégorie, puis vérifiez la référence, les mesures et le coût livré avant de garder un article. Ce guide en français rassemble les points à contrôler quand on compare plusieurs annonces.</p>
+      </div>
+    </section>
+
+    <div class="browse">
+      <nav class="directory" aria-labelledby="rubriques">
+        <h2 id="rubriques">10 catégories à explorer sur HipobuyFind</h2>
+        <ul class="categories">
+          <li><a href="https://hipobuyfind.com/category-911-Shoes.html"><span class="index" aria-hidden="true">01</span>Chaussures<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html"><span class="index" aria-hidden="true">02</span>Sweats et pulls<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html"><span class="index" aria-hidden="true">03</span>T-shirts<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-914-Jackets.html"><span class="index" aria-hidden="true">04</span>Vestes<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html"><span class="index" aria-hidden="true">05</span>Pantalons et shorts<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-916-Headwear.html"><span class="index" aria-hidden="true">06</span>Casquettes et bonnets<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-917-Sets.html"><span class="index" aria-hidden="true">07</span>Ensembles<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html"><span class="index" aria-hidden="true">08</span>Sous-vêtements<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-919-Jersey.html"><span class="index" aria-hidden="true">09</span>Maillots de sport<span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-920-Accessories.html"><span class="index" aria-hidden="true">10</span>Accessoires<span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+      <figure class="cover">
+        <img src="https://www.soleclassics.com/cdn/shop/products/CW2288-111-PHSLH000-2000.png?v=1650692815&amp;width=640" srcset="https://www.soleclassics.com/cdn/shop/products/CW2288-111-PHSLH000-2000.png?v=1650692815&amp;width=480 480w, https://www.soleclassics.com/cdn/shop/products/CW2288-111-PHSLH000-2000.png?v=1650692815&amp;width=640 640w, https://www.soleclassics.com/cdn/shop/products/CW2288-111-PHSLH000-2000.png?v=1650692815&amp;width=960 960w" sizes="(max-width: 44rem) calc(100vw - 2rem), 28rem" width="640" height="640" alt="Basket Nike Air Force 1 ’07 blanche vue de profil" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Nike Air Force 1 ’07 · Exemple visuel de chaussure basse.</figcaption>
+      </figure>
+    </div>
+
+    <section class="section" aria-labelledby="guide">
+      <h2 id="guide">Guide d’achat GTBuy</h2>
+      <p>Une ligne suffit pour repérer un modèle. Pour décider, ouvrez l’annonce et notez ce que vous pouvez confirmer sur la variante qui vous intéresse.</p>
+      <div class="articles">
+        <article>
+          <span class="stamp" aria-hidden="true">01</span>
+          <h3>Vérifier les liens produits GTBuy</h3>
+          <div class="article-copy">
+            <p>Pour un lien produit Weidian, Taobao ou 1688, notez la référence du vendeur et la date de vérification. Si le lien redirige vers une autre annonce, comparez la fiche produit, le coloris, la taille disponible et le prix de la variante sélectionnée.</p>
+            <p>Une photo de catalogue peut servir à repérer une coupe. Gardez séparément le lien de l’annonce source et la référence exacte du modèle pour éviter de confondre deux offres qui utilisent la même image.</p>
+          </div>
+        </article>
+        <article>
+          <span class="stamp" aria-hidden="true">02</span>
+          <h3>Comparer les tailles en centimètres</h3>
+          <div class="article-copy">
+            <p>Pour choisir une pointure EU, mesurez le pied debout, du talon à l’orteil le plus long. Si le guide des tailles de la basket donne la longueur de la semelle intérieure, comparez-la à celle d’une paire qui vous va déjà.</p>
+            <p>Pour un sweat, relevez la largeur de poitrine à plat et la longueur du dos. Pour un pantalon, ajoutez le tour de taille et la longueur d’entrejambe. Pour une casquette, comparez votre tour de tête à la plage de réglage indiquée.</p>
+          </div>
+        </article>
+        <article>
+          <span class="stamp" aria-hidden="true">03</span>
+          <h3>Lire les photos QC GTBuy</h3>
+          <div class="article-copy">
+            <p>Les photos de contrôle qualité servent à vérifier la pièce photographiée. Pour une basket, comparez les deux profils, la semelle et les talons. Pour un vêtement, inspectez les coutures, le col et l’étiquette de composition. Pour un bijou, demandez une vue du fermoir et une mesure de la longueur.</p>
+            <p>Si le coloris paraît différent, demandez une photo en lumière neutre. Si la taille est incertaine, demandez une vue avec un mètre posé sur la pièce et les graduations lisibles.</p>
+          </div>
+        </article>
+        <article>
+          <span class="stamp" aria-hidden="true">04</span>
+          <h3>Estimer la livraison GTBuy</h3>
+          <div class="article-copy">
+            <p>Pour comparer deux options d’expédition internationale, relevez la devise, le transport jusqu’à l’entrepôt, les frais de service et le montant du devis. Vérifiez si le transporteur facture le poids réel ou le poids volumétrique. Une boîte à chaussures peut changer le volume du colis.</p>
+            <p>Pour une adresse en France ou en Belgique, comparez le coût total en euros. Pour la Suisse ou le Canada, faites la même comparaison en francs suisses ou en dollars canadiens. Vérifiez les frais à la réception et les conditions de retour pour l’adresse exacte.</p>
+          </div>
+        </article>
+      </div>
+      <dl class="states" aria-label="Trois statuts pour votre liste">
+        <div><dt>À garder</dt><dd>La variante est disponible et les mesures sont comparables.</dd></div>
+        <div><dt>À vérifier</dt><dd>Il manque une photo, une cote ou le détail d’un frais.</dd></div>
+        <div><dt>À écarter</dt><dd>L’annonce a disparu ou renvoie vers une autre référence.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="visuels">
+      <h2 id="visuels">Quatre détails à regarder de près</h2>
+      <p>Ces photos illustrent des coupes et des finitions. Vérifiez séparément les références, la disponibilité et la provenance des articles dans les annonces.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://images.stockx.com/images/Louis-Vuitton-Monogram-Essential-Cap-Black.jpg?auto=compress&amp;bg=FFFFFF&amp;dpr=2&amp;fit=fill&amp;fm=webp&amp;h=320&amp;q=60&amp;trim=color&amp;updated_at=1651619099&amp;w=480" width="960" height="640" loading="lazy" decoding="async" alt="Casquette noire Louis Vuitton Monogram Essential à visière incurvée">
+          <figcaption>Louis Vuitton · Forme de la visière.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1715967027/753572_XJFUG_9037_001_100_0000_Light-Polo-de-piqu-de-algodn-con-GG.jpg" width="1200" height="1200" loading="lazy" decoding="async" alt="Polo Gucci clair en piqué de coton avec motif GG">
+          <figcaption>Gucci · Col du polo et texture du piqué.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/500483FC89_front_wm_102?%24product_default_bg%24=" width="800" height="800" loading="lazy" decoding="async" alt="Bracelet Hermès Rivale Double Tour en cuir noir avec anneau et clous dorés">
+          <figcaption>Hermès · Anneau et clous du bracelet Rivale.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/E1520PTCRSD301_SBG_E01-3?%24r9x10_raw%24=&amp;crop=0%2C0%2C4000%2C5000&amp;hei=500&amp;scale=1&amp;wid=463" width="463" height="500" loading="lazy" decoding="async" alt="Boucles d’oreilles Dior Petit CD dorées avec perles blanches pendantes">
+          <figcaption>Dior · Attache et longueur du pendant.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="questions">
+      <h2 id="questions">Questions fréquentes</h2>
+      <div class="faq">
+        <details open>
+          <summary>Qu’est-ce qu’une GTBuy spreadsheet ?</summary>
+          <p>C’est un tableau qui regroupe des liens produits et des informations de comparaison. Dans ce guide indépendant, les catégories mènent au catalogue HipobuyFind.</p>
+        </details>
+        <details>
+          <summary>Comment vérifier qu’un lien correspond à la bonne variante ?</summary>
+          <p>Ouvrez l’annonce source et sélectionnez le modèle, la couleur et la taille. Vérifiez ensuite que la référence, la disponibilité et le prix affichés correspondent à cette sélection.</p>
+        </details>
+        <details>
+          <summary>Comment choisir sa pointure ?</summary>
+          <p>Mesurez vos deux pieds en centimètres et retenez le plus long. Vérifiez si le tableau du vendeur indique la longueur du pied ou de la semelle intérieure, puis comparez des mesures de même type.</p>
+        </details>
+        <details>
+          <summary>Que peut-on vérifier avec des photos QC ?</summary>
+          <p>Les photos de contrôle qualité permettent de comparer la couleur, les coutures, les étiquettes et les finitions visibles. Pour établir la provenance, demandez des documents distincts.</p>
+        </details>
+        <details>
+          <summary>Comment estimer le coût livré en France ou en Belgique ?</summary>
+          <p>Additionnez le prix de la variante, le transport local, les frais de service et l’expédition internationale. Vérifiez les taxes et frais de traitement applicables à l’adresse de livraison, ainsi que les montants déjà inclus dans le devis.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>Guide de comparaison en français</span>
+    <a href="https://www.hipobuyfind.com">Parcourir le catalogue HipobuyFind</a>
+  </footer>
+</body>
+</html>
